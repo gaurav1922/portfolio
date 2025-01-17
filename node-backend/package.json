@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:backend": "node src/server.js",
+  "build:frontend": "cd ../react-frontend && npm run build && cp -r ../react-frontend/build/* ./public/",
+  "start": "npm run build:frontend && npm run start:backend"
   },
   "keywords": [],
   "author": "",
